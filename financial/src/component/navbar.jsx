@@ -12,9 +12,9 @@ function Navbar() {
         <h1 className="sm:text-3xl font-bold text-xl text-white">Wern Finance</h1>
       </div>
       <div className="lg:py-5 py-2">
-        <h1 className="lg:px-8 lg:py-3 px-4 py-2 border-[1px] rounded-full hover:bg-gray-500 hover:text-white text-xl text-[#772AB3]">
+        <button className="lg:px-8 lg:py-3 px-4 py-2 border-[1px] rounded-full hover:bg-gray-500 hover:text-white text-[#772AB3]">
           Contact
-        </h1>
+        </button>
       </div>
     </div>
   );
