@@ -1,6 +1,7 @@
 import DebitCard from "./component/debitCard";
 import FAQSection from "./component/FAQs";
 import FindCard from "./component/findCard";
+import Footer from "./component/footer";
 import Future from "./component/future";
 import Hero from "./component/hero";
 import Navbar from "./component/navbar"
@@ -22,7 +23,7 @@ function App() {
         <FindCard />
         <Rating />
         <FAQSection />
-        
+        <Footer />
       </div>
     </div>
   );

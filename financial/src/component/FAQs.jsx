@@ -36,34 +36,38 @@ const faqs = [
 
 
 function FAQSection() {
-
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
+  const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   }
 
-
   return (
-    <div className="text-white mt-10 pb-5">
-      <h1 className="text-2xl font-bold text-center">FAQs</h1>
-
-      <div className="space-y-2">
+    <div className="text-white pt-10">
+      <h1 className="text-xl font-bold text-center">FAQs</h1>
+      <div className="pt-5 space-y-3">
         {faqs.map((item, index) => (
           <div
-            className="pt-5 border-b-[1.5px] pb-2 border-[#ADB2B1]"
+            className="text-xl border-b-[1.5px] border-[#ADB2B1]"
             key={index}
           >
             <button
-              onClick={() => toggleFAQ(index)}
-              className="text-xl font-bold justify-between items-center flex w-full text-left"
+              className="flex w-full text-left justify-between"
+              onClick={() => toggleFaq(index)}
             >
-              {item.question}
-              <span>{openIndex === index ? '-' : '+'}</span>
+              {item.question}{' '}
+              <span
+                className={`text-4xl ${
+                  openIndex === index ? 'text-red-600' : 'text-green-500 '
+                }`}
+              >
+                {openIndex === index ? '-' : '+'}
+              </span>
             </button>
-
             {openIndex === index && (
-              <div className="pt-3 text-[#ADB2B1] transition-all duration-300">{item.answer}</div>
+              <div className="text-base text-[#ADB2B1] font-medium pb-2 transition-all duration-300">
+                {item.answer}
+              </div>
             )}
           </div>
         ))}
